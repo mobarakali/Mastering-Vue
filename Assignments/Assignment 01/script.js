@@ -1,7 +1,7 @@
-// Constants
-const API_KEY = "ba60b48beedfcceb3ddc6e79ecda50aa"; 
+// OpenWeatherMap API key
+const API_KEY = "ba60b48beedfcceb3ddc6e79ecda50aa";
 
-// Function to retrieve weather data
+// Function to retrieve weather data from OpenWeatherMap API
 const getWeatherData = async (location) => {
   try {
     const response = await fetch(
@@ -14,18 +14,20 @@ const getWeatherData = async (location) => {
   }
 };
 
-// Function to display weather information
+// Function to display weather information on the page
 const displayWeatherInfo = (weatherData) => {
   const weatherInfo = document.getElementById("weatherInfo");
+  const temperatureCelsius = weatherData.main.temp - 273.15;
+
   weatherInfo.innerHTML = `
-    <h2>${weatherData.name}</h2>
-    <p>Temperature: ${weatherData.main.temp} &#8451;</p>
-    <p>Description: ${weatherData.weather[0].description}</p>
-    <p>Humidity: ${weatherData.main.humidity}%</p>
-  `;
+      <h2>${weatherData.name}</h2>
+      <p>Temperature: ${temperatureCelsius.toFixed(2)} &#8451;</p>
+      <p>Description: ${weatherData.weather[0].description}</p>
+      <p>Humidity: ${weatherData.main.humidity}%</p>
+    `;
 };
 
-// Function to handle button click event
+// Function to handle button click event and retrieve weather data
 const getWeather = () => {
   const locationInput = document.getElementById("locationInput");
   const location = locationInput.value.trim();
@@ -35,6 +37,7 @@ const getWeather = () => {
     return;
   }
 
+  // Call getWeatherData function and pass location as an argument
   getWeatherData(location)
     .then((data) => displayWeatherInfo(data))
     .catch((error) => {
@@ -42,5 +45,6 @@ const getWeather = () => {
       alert("Failed to fetch weather data. Please try again.");
     });
 
+  // Clear input field
   locationInput.value = "";
 };
