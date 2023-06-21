@@ -1,6 +1,5 @@
 // Constants
-// const API_KEY = "ba60b48beedfcceb3ddc6e79ecda50aa"; // Replace with your API key from OpenWeatherMap
-const API_KEY = "d6a5a587d9f2465fb9161231232106&q"; // Replace with your API key from OpenWeatherMap
+const API_KEY = "ba60b48beedfcceb3ddc6e79ecda50aa"; 
 
 // Function to retrieve weather data
 const getWeatherData = async (location) => {
