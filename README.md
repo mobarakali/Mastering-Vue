@@ -1,2 +1,2 @@
-# Mastering-Vue
+# Mastering-Vue.js
 Mastering Vue.js
