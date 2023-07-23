@@ -1,5 +1,12 @@
 <script setup>
-const items = [1,2,3,4,5];
+// const items = [1,2,3,4,5];
+const tasks =[
+  'Wakeup Early @ 4AM',
+  'Perform Fajr Salat',
+  'Morning Walk',
+  'Start Office',
+  'Break Fast'
+]
 
 </script>
 
@@ -7,8 +14,12 @@ const items = [1,2,3,4,5];
   <div>
     <ul>
       <!-- <li v-for="item in items">{{ item }} </li> -->
-      <li v-for="n in 10">{{ n }} </li>
+      <li v-for="task in tasks">{{ task }} </li>
     </ul>
+
+    <div style="margin: 10px auto ;" v-for="(task, index) in tasks">
+      {{ index+1 }}. {{ task }}
+    </div>
   </div>
   
 </template>
@@ -19,10 +30,11 @@ ul{
   min-width: 300px;
 }
 li{
-  background-color: #ffffff66;
+  background-color: #ffffff;
   margin: 2px auto;
-  color: #0fff00;
-  padding:5px;
+  color: #000000;
+  padding:15px;
+  font-size: 1.125rem;
 }
 
 </style>
