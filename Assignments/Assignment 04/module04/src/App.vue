@@ -1,3 +1,25 @@
+
+<script setup>
+const carouselData = {
+  "images": [
+    {
+      "src": "https://picsum.photos/id/247/1920/650",
+      "alt": "First slide"
+    },
+    {
+      "src": "https://picsum.photos/id/257/1920/650",
+      "alt": "Second slide"
+    },
+    {
+      "src": "https://picsum.photos/id/237/1920/650",
+      "alt": "Third slide"
+    }
+  ]
+};
+
+const { images } = carouselData;
+</script>
+
 <template>
   <div class="container">
     <div class="row">
@@ -30,36 +52,6 @@
   </div>
 </template>
 
-<script setup>
-const jsonData = {
-  "images": [
-    {
-      "src": "https://picsum.photos/id/247/1920/650",
-      "alt": "First slide"
-    },
-    {
-      "src": "https://picsum.photos/id/257/1920/650",
-      "alt": "Second slide"
-    },
-    {
-      "src": "https://picsum.photos/id/237/1920/650",
-      "alt": "Third slide"
-    }
-  ]
-};
-
-const { images } = jsonData;
-</script>
-
-<script>
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  setup() {
-    // No need for explicit setup function here, as it's included in the <script setup> block above.
-  }
-});
-</script>
 
 <style>
 #app{
