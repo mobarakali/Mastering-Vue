@@ -1,47 +1,28 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+const items = [1,2,3,4,5];
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <ul>
+      <!-- <li v-for="item in items">{{ item }} </li> -->
+      <li v-for="n in 10">{{ n }} </li>
+    </ul>
+  </div>
+  
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+ul{
+  list-style-type: none;
+  min-width: 300px;
+}
+li{
+  background-color: #ffffff66;
+  margin: 2px auto;
+  color: #0fff00;
+  padding:5px;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
