@@ -1,29 +1,6 @@
-# module04
+# Assignment 1 (Module 4)
+## Assignment: Vue.js 3 Image Carousel
 
-This template should help get you started developing with Vue 3 in Vite.
+    Please create an image carousel using Vue.js 3 Composition API. The carousel should support dynamic loading of images, navigation buttons to move between images. You are encouraged to use Vue.js 3, HTML, CSS, and any preferred CSS frameworks such as Bootstrap or Tailwind CSS. 
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
