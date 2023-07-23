@@ -5,11 +5,11 @@ import { ref } from 'vue';
 
 const carouselData = [
   {
-    "src": "https://picsum.photos/id/200/1920/650",
+    "src": "https://picsum.photos/id/301/1920/650",
     "alt": "First slide"
   },
   {
-    "src": "https://picsum.photos/id/1000/1920/650",
+    "src": "https://picsum.photos/id/304/1920/650",
     "alt": "Second slide"
   },
   {
@@ -33,6 +33,8 @@ const prevSlide = () => {
 <template>
   <div class="container">
     <div class="row">
+      <h1>Assignment 1 (Module 4)</h1>
+      <h2 class="my-5">Assignment: Vue.js 3 Image Carousel</h2>
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
           <li v-for="(image, index) in images" :key="index" data-bs-target="#carouselExampleIndicators" :data-bs-slide-to="index" :class="{ active: index === currentSlideIndex }" ></li>
